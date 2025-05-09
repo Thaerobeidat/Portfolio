@@ -23,36 +23,34 @@
     </div>
     <header>
         <nav class="container">
-            <a href="#" class="logo"><img src="img/logoo.png" alt=""></a>
+            <a href="#" class="logo"><img src="img/logo.png" alt=""></a>
 
             <div class="links" id="links">
-                <span class="close_menu"  onclick="Open_close_Menu()"><i class="fa-solid fa-xmark"></i></span>
+                <span class="close_menu"  onclick="Open_colose_Menu()"><i class="fa-solid fa-xmark"></i></span>
                 
                 
-                <a href="#" class="logo"><img src="img/logoo.png" alt=""></a>
-                <a class="active" href="#">Home</a>
-                <a href="#">About</a>
-                <a href="#">Services</a>
-                <a href="#">Projects</a>
-                <a href="#">Contact</a>
+                <a href="#" class="logo"><img src="img/logo.png" alt=""></a>
+                <a class="active" href="#aboutme">Home</a>
+                <a href="#about">About</a>
+                <a href="#services">Services</a>
+                <a href="#projects">Projects</a>
+                <a href="#contact">Contact</a>
             </div>
 
             <div class="icons">
-                <a href="https://www.linkedin.com/in/thaerobeidatt/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
-                <a href="https://github.com/Thaerobeidat" target="_blank"><i class="fa-brands fa-github"></i></a>
-                <span class="icon_menu" onclick="Open_close_Menu()"><i class="fa-solid fa-bars"></i></span>
+                <a href="https://www.linkedin.com/in/thaerobeidatt/" target="_blank" style="color: #c9f31d;"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="https://github.com/Thaerobeidat" target="_blank"><i class="fa-brands fa-github" style="color: #c9f31d;"></i></a>
+                <span class="icon_menu" onclick="Open_colose_Menu()"><i class="fa-solid fa-bars"></i></span>
             </div>
         </nav>
     </header>
-    <div class="aboutme">
+    <div class="aboutme" id="aboutme">
         <div class="container">
             <div class="div_text">
                 <h4>Hello, i'm</h4>
                 <h1><span>Tha'er Obeidat</span></h1>
                 <h2>Web Developer</h2>
-                <p>
-                    I'm Thair Obeidat, a motivated and dedicated IT graduate with a Bachelor's degree in Computer Science from Yarmouk University. Currently, I'm training in Full Stack Web Development with a focus on front-end technologies like HTML, CSS, and JavaScript, as well as back-end basics using PHP and Laravel. I am passionate about building clean, responsive websites and continuously developing my skills through hands-on practice and professional courses.
-                </p>                
+                <p>I'm Thair Obeidat, a motivated and dedicated IT graduate with a Bachelor's degree in Computer Science from Yarmouk University. Currently, I'm training in Full Stack Web Development with a focus on front-end technologies like HTML, CSS, and JavaScript, as well as back-end basics using PHP and Laravel. I am passionate about building clean, responsive websites and continuously developing my skills through hands-on practice and professional courses.</p>                
                 <div class="btns">
                     <a href="#" class="btn">Hire me</a>
                     <a href="img/Resume.pdf" download class="btn_no_bg">Download Resume</a>
@@ -64,7 +62,7 @@
             </div>
         </div>
     </div>
-    <section class="about">
+    <section class="about" id="about">
         <div class="container">
             <div class="div_text">
                 <h5>About me</h5>
@@ -85,7 +83,7 @@
             </div>
         </div>
     </section>
-    <section class="services">
+    <section class="services" id="services">
         <div class="container">
             <div class="top_section">
                 <h2>My <span>Services</span></h2>
@@ -115,7 +113,7 @@
             </div>
         </div>
     </section>
-    <section class="projects">
+    <section class="projects" id="projects">
         <div class="container">
           <div class="top_section">
             <h2>My <span>Projects</span></h2>
@@ -178,12 +176,12 @@
             </div>
             <form method="post" action="https://api.sheetmonkey.io/form/jmunLKXZABPP5gzUwqgwfd">
                 <div class="inpts_form">
-                    <input type="text" placeholder="Full Name">
-                    <input type="text" placeholder="Email">
-                    <input type="text" placeholder="Mobile Number">
-                    <input type="text" placeholder="Subject">
+                    <input type="text" placeholder="Full Name" name="Name" required>
+                    <input type="text" placeholder="Email" name="Email" required>
+                    <input type="text" placeholder="Mobile Number" name="Phone">
+                    <input type="text" placeholder="Subject" name="Subject">
 
-                    <textarea name="" id="" rows="10" placeholder="Your Message Here ..."></textarea>
+                    <textarea name="message" id="" rows="10" placeholder="Your Message Here ..."></textarea>
                 </div>
 
                 <button type="submit" class="btn">Send Message</button>

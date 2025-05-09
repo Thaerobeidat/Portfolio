@@ -7,13 +7,13 @@
     list-style-type: none;
     font-family: "Inter",sans-serif;
 }
-:root {
-    --main_color : #009dff ;
-    --p_color :#8a8a8a;
+:root{
+    --main_color:#c9f31d;
+    --p_color:#8a8a8a;
     --bg_color:#1F1F1F;
     --white_color:#fff;
     --black_color:#070707;
-    --border-color:rgba(225,225,225,0.1);
+    --border-color: rgba(255, 255, 255, 0.1);
 }
 body {
     background: #131313;
@@ -119,7 +119,6 @@ p{
     }
 
 }
-/* background lines*/
 /* background lines */
 
 .top_section{
@@ -160,6 +159,7 @@ header nav .links {
 }
 header nav .links a {
     color: var(--white_color);
+    text-transform: capitalize;
     font-size: 18px;
     transition: 0.3s;
 }
@@ -169,18 +169,18 @@ header nav .links a:hover {
 header nav .icons {
     display: flex;
     gap: 30px;
-    transition: 0.3s;
+    /* transition: 0.3s; */
 }
 header nav .icons a:hover {
     scale: 1.4;
 }
 /*Start About Me*/
 .aboutme {
-padding-top: 100px;
-height: 100vh;
-justify-content: center;
-align-items: center;
-display: flex;
+    padding-top: 100px;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .aboutme .container {
     display: flex;
@@ -218,11 +218,13 @@ display: flex;
     width: 40%;
     position: relative;
     border-radius: 0 0 600px 600px;
+
     overflow: hidden;
 }
 .aboutme .div_img .bg_img {
+    
     position: absolute;
-    bottom:-27px;
+    bottom: 0;
     left: 0;
     z-index: -1;
 
@@ -264,14 +266,19 @@ display: flex;
     flex-wrap: wrap;
 }
 .about .div_text ul li {
-    width: 45%;
+    /* width: 45%;
     white-space: nowrap;
     margin-bottom: 20px;
-    margin-right:20px ;
+    margin-right:20px ; */
+    width: 45%;
+    font-weight: bold;
+    display: flex;
+    gap: 10px;
+    margin-bottom: 30px;
 }
 .about .div_text ul li i {
     color: var(--main_color);
-    padding-right: 5px;
+    /* padding-right: 5px; */
 }
 /*End About*/
 
@@ -330,11 +337,17 @@ display: flex;
     padding: 30px;
     border-radius: 20px;
     box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    /* display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 50px; */
   }
   
   .projects .project_box .text {
     width: 100%;
     text-align: left;
+    /* margin-left: 100px;
+    width: calc(50% - 100px); */
   }
   
   .projects .project_box .text h4 {
@@ -342,6 +355,9 @@ display: flex;
     margin-bottom: 10px;
     font-weight: normal;
     color: var(--main_color);
+    /* font-size: 20px;
+    margin-bottom: 20px;
+    font-weight: normal; */
   }
   
   .projects .project_box .text h3 a {
@@ -349,6 +365,9 @@ display: flex;
     color: var(--white_color);
     transition: 0.5s;
     text-decoration: none;
+    /* font-size: 40px;
+    color: var(--white_color);
+    transition: 0.5s; */
   }
   
   .projects .project_box .text h3 a:hover {
@@ -359,6 +378,8 @@ display: flex;
     margin: 20px 0 30px;
     line-height: 1.8;
     color: var(--white_color);
+    /* margin: 30px 0 50px;
+    line-height: 1.8; */
   }
   
   .projects .project_box .text .link {
@@ -374,6 +395,18 @@ display: flex;
     border-radius: 50%;
     rotate: 45deg;
     transition: 0.3s ease-in-out;
+    /* display: block;
+    width: 50px;
+    height: 50px;
+    border: 1px solid var(--border-color);
+    color: var(--black_color);
+    font-size: 20px;
+    background: var(--main_color);
+    text-align: center;
+    line-height: 50px;
+    border-radius: 50%;
+    rotate: 45deg;
+    transition: 0.3s ease-in-out; */
   }
   
   .projects .project_box .text .link:hover {
@@ -382,6 +415,8 @@ display: flex;
   
   .projects .project_box.project_box_2 {
     background-color: var(--bg-alt); 
+        /* flex-direction: row-reverse; */
+
   }
   
   /* End projects */
@@ -481,6 +516,249 @@ display: flex;
 }
 
 /* End contact */ 
+/* Start Responsive */ 
+
+.close_menu,
+header .links .logo,
+.icon_menu{
+    display: none;
+}
 
 
+@media (max-width:1250px) {
+    .container{
+        width: 90%;
+    }
+}
+
+@media (max-width:1000px) {
+    header nav .links{
+        position: fixed;
+        top: 0;
+        flex-direction: column;
+        width: 400px;
+        background: var(--black_color);
+        left: -400px;
+        padding: 50px 0;
+        height: 100%;
+        border-right: 1px solid var(--border-color);
+        text-align: center;
+        transition: 0.3s ease-in-out;
+    }
+    header nav .links.active{
+        left: 0;
+    }
+    .close_menu{
+        display: block;
+        font-size: 28px;
+        position: absolute;
+        top: 30px;
+        right: 30px;
+    }
+    header .links .logo{
+        display: block;
+    }
+    .icon_menu{
+        display: block;
+        font-size: 28px;
+    }
+    .aboutme .div_text h4 {
+        font-size: 25px;
+    }
+    .aboutme .div_text h1 {
+        font-size: 55px;
+    }
+    .aboutme .div_text h2 {
+        font-size: 55px;
+    }
+    .aboutme .div_text p{
+        font-size: 16px;
+        margin: 30px auto;
+    }
+    .aboutme .btn {
+        font-size: 18px;
+        padding: 16px 40px;
+    }
+    .aboutme .container{
+        flex-direction: column;
+    }
+    .aboutme .div_text{
+        width: 100%;
+        margin-top: 50px;
+        text-align: center;
+        margin-bottom: 30px;
+    }
+    .aboutme .btns{
+        justify-content: center;
+    }
+    .aboutme{
+        height: auto;
+    }
+    .about .container{
+        flex-direction: column;
+    }
+    .about .div_text{
+        width: 100%;
+        margin-bottom: 400px;
+    }
+    .about .div_img {
+        width:45%;
+    }
+    .services .boxs .box {
+        width :47%;
+        margin-bottom: 30px;
+    }
+    .projects .project_box .text h3 a {
+        font-size: 25px;
+    }
+    .projects .project_box .text h4 {
+        font-size: 16px;
+    }
+    .projects .project_box .text p {
+        font-size: 14px;
+    }
+    .projects .project_box .text {
+        width: calc(50% - 50px);
+        margin-left: 50px;
+    }
+    .contact .container{
+        flex-direction: column;
+    }
+    .contact .soial_contact {
+        width: 100%;
+        margin-bottom: 40px;
+    }
+    .contact .social_contact .links {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    .contact .social_contact .links a{
+        width: 50%;
+    }
+    .contact .social_contact .links a {
+        font-size: 16px;
+    }
+    .contact .social_contact .links a i {
+        width: 35px;
+        height: 35px;
+        line-height: 35px;
+    }
+    .contact form {
+        width :80%;
+        margin : 0 auto;
+    }
+    .contact .btn {
+        font-size: 16px;
+        padding: 13px 28px;
+    }
+}
+
+@media (max-width:500px){
+    .btn {
+        padding: 12px 25px;
+        font-size: 14px;
+    }
+    header nav .icons a{
+        font-size: 20px;
+    }
+    header nav .icons{
+        gap: 15px;
+        align-items: center;
+    }
+    header nav .logo img{
+        width: 150px;
+    }
+    header nav .links{
+        width: 100%;
+        left: -100%;
+    }
+    .icon_menu {
+        margin-left: 15px;
+    }
+    .aboutme .div_text h4 {
+        font-size: 22px;
+    }
+    .aboutme .div_text h1 {
+        font-size: 40px;
+    }
+    .aboutme .div_text h2 {
+        font-size: 40px;
+    }
+    .aboutme .div_text p{
+        font-size: 14px;
+        margin: 25px auto;
+        width: 100%;
+    }
+    .aboutme .btn {
+        font-size: 16px;
+        padding: 14px 30px;
+    }
+    .about .div_img{
+        width: 70%;
+    }
+    .about .div_text h2 {
+        font-size: 30px;
+    }
+    .about .div_text h4 {
+        font-size: 20px;
+    }
+    .about .div_text p {
+        font-size: 14px;
+    }
+    .about .div_text ul li {
+        width: 100%;
+        font-size: 14px;
+    }
+    .about .div_img {
+        width: 85%;
+    }
+    .top_section  h2 {
+        font-size: 22px;
+    }
+    .services .boxs .box {
+        width: 100%;
+    }
+    .services .boxs .box i {
+        font-size: 55px;
+    }
+    .projects .project_box {
+        flex-direction: column;
+    }
+    .projects .project_box.project_box_2{
+        flex-direction: column;
+    }
+    .projects .project_box .text {
+        width: 100%;
+        margin-left: 0px;
+    }
+    .projects .project_box .text p {
+        margin: 20px 0 30px;
+    }
+    .projects .project_box .text h3 a {
+        font-size: 23px;
+    }
+    .contact .social_contact .links{
+        flex-direction: column;
+    }
+    .contact .social_contact .links a {
+        width: 100%;
+    }
+    .projects{
+        padding-bottom: 40px;
+    }
+    .contact{
+        padding-top: 0;
+    }
+    .contact .top_section{
+        margin-bottom: 60px;
+    }
+    .contact form {
+        width: 100%;
+    }
+    .contact form .inpts_form input {
+        width: 100%;
+        padding: 15px 20px;
+        margin-bottom: 20px;
+    }
+}
   
